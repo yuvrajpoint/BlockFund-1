@@ -3,20 +3,88 @@
 @tailwind utilities;
 
 :root {
-	line-height: 1.5;
-	font-weight: 400;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: 'Inter', sans-serif;
-	font-optical-sizing: auto;
-	font-style: normal;
-	font-variation-settings: 'slnt' 0;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
 }
 
 @layer base {
-	body {
-		@apply bg-zinc-950 text-neutral-200;
-	}
+  body {
+    @apply bg-zinc-950 text-neutral-200;
+    background-image: url("/bg-image-5.png") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
+
+.sec1 {
+  display: flex;
+  height: 18vh;
+  justify-content: center;
+  align-items: end;
+  font-size: xx-large;
+}
+
+.sec11 {
+  width: 52vw;
+  height: 8vh;
+  justify-content: center;
+  align-items: end;
+  border-right: 0.15em solid gray;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  position: relative;
+}
+
+.typing {
+  animation: typing 4s steps(39, end) forwards, blink-caret 2s step-end;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+
+.typing::after {
+  content: "";
+  animation: hide-caret 0s forwards;
+  animation-delay: 4s;
+}
+
+@keyframes hide-caret {
+  to {
+    border-right: none;
+  }
+}
+
+.typing.completed::after {
+  display: none;
+}
+
+/* .class-return-zero {
+  background-image: "/bg-image-1.wevp" !important;
+} */
