@@ -37,6 +37,9 @@ export default function DashboardPage() {
             setIsModalOpen(true);
             // alert("ButtonClicked.");
           }}
+          style={{
+            backgroundColor: "#7FB22D",
+          }}
         >
           Create Campaign
         </button>
@@ -94,7 +97,7 @@ const CreateCampaignModal = ({ setIsModalOpen }: CreateCampaignModalProps) => {
           _durationInDays: campaignDeadline,
         },
         publisher: "0x87bF54A0C7b2AEE681fcB1d46bB48798b3603448",
-        version: "1.0.1",
+        version: "1.0.2",
       });
       alert("Contract deployed successfully!");
     } catch (error) {
