@@ -1,10 +1,10 @@
-export default () => {
-  const footerNavs = [
-    { name: "Terms" },
-    { name: "License" },
-    { name: "Privacy" },
-    { name: "About us" },
-  ];
+export default function Footer() {
+  // const footerNavs = [
+  //   { name: "Terms" },
+  //   { name: "License" },
+  //   { name: "Privacy" },
+  //   { name: "About us" },
+  // ];
 
   return (
     <footer className="pt-10">
@@ -12,8 +12,8 @@ export default () => {
         <div className="space-y-6 sm:max-w-md sm:mx-auto sm:text-center">
           <img src="/RetZer.png" className="w-32 sm:mx-auto" />
           <p>
-            "Crafted with dedication by the students of MBM, we are Team
-            ReturnZero—signing off with pride."
+            Crafted with dedication by the students of MBM, we are Team
+            ReturnZero—signing off with pride.
           </p>
         </div>
         <div className="mt-10 py-10 border-t items-center justify-between sm:flex">
@@ -36,4 +36,4 @@ export default () => {
       </div>
     </footer>
   );
-};
+}

@@ -153,7 +153,7 @@ export default function CampaignPage() {
             <p>Loading...</p>
           ) : tiers && tiers.length > 0 ? (
             tiers?.map((tier, index) => (
-              <div>
+              <div key={index}>
                 <TierCard
                   key={index}
                   tier={tier}
