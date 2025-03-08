@@ -28,9 +28,10 @@ const Navbar = () => {
               <Image
                 src={returnZeroDp}
                 alt="BlockFund"
-                width={32}
+                width={28}
                 style={{
                   filter: "drop-shadow(0px 0px 24px #7FB22D)",
+                  width: "3rem",
                 }}
               />
             </div>
@@ -42,6 +43,22 @@ const Navbar = () => {
                     style={{ margin: 6 }}
                   >
                     Campaigns
+                  </p>
+                </Link>
+                <Link href={"/about-us"}>
+                  <p
+                    className="test-css-class rounded-md px-3 py-2 text-sm font-medium text-slate-700"
+                    style={{ margin: 6 }}
+                  >
+                    About Us
+                  </p>
+                </Link>
+                <Link href={"/contact-us"}>
+                  <p
+                    className="test-css-class rounded-md px-3 py-2 text-sm font-medium text-slate-700"
+                    style={{ margin: 6 }}
+                  >
+                    Contact Us
                   </p>
                 </Link>
                 {account && (
