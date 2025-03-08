@@ -3,7 +3,8 @@ const BlockFundTitle = () => {
     <div
       className="flex justify-center items-center"
       style={{
-        marginTop: "46px",
+        marginTop: "48px",
+        marginBottom: "32px",
       }}
     >
       <h1 className="text-5xl font-bold text-center">BlockFund</h1>

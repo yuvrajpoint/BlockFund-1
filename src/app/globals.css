@@ -38,7 +38,6 @@
   height: 8vh;
   justify-content: center;
   align-items: end;
-  border-right: 0.15em solid gray;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
@@ -46,45 +45,11 @@
   position: relative;
 }
 
-.typing {
-  animation: typing 4s steps(39, end) forwards, blink-caret 2s step-end;
+.landing-page {
+  height: 100vh;
+  padding-bottom: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 65%;
-  }
-}
-
-@keyframes blink-caret {
-  0%,
-  100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: gray;
-  }
-}
-
-.typing::after {
-  content: "";
-  animation: hide-caret 0s forwards;
-  animation-delay: 4s;
-}
-
-@keyframes hide-caret {
-  to {
-    border-right: none;
-  }
-}
-
-.typing.completed::after {
-  display: none;
-}
-
-/* .class-return-zero {
-  background-image: "/bg-image-1.wevp" !important;
-} */
