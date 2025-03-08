@@ -3,7 +3,7 @@
 import "../styles/navbar.css";
 
 import Image from "next/image";
-import returnZeroDp from "@public/ret-zero-logo.";
+import returnZeroDp from "@public/ret-zero-logo.png";
 
 import { client } from "@/app/client";
 import Link from "next/link";
