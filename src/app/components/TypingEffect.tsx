@@ -6,7 +6,14 @@ export default function TypingEffect() {
 
   return (
     <div
-      className={`typewriter-container ${isTypingComplete ? "hide-caret" : ""}`}
+      className={`typewriter-container sec1 sec11 ${
+        isTypingComplete ? "hide-caret" : ""
+      }`}
+      // style={{
+      //   display: "flex",
+      //   justifyContent: "center",
+      //   fontSize: "40px",
+      // }}
     >
       <Typewriter
         onInit={(typewriter) => {
