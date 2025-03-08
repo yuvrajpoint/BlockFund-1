@@ -29,7 +29,37 @@ export default function Home() {
       <section className="landing-page">
         <BlockFundTitle></BlockFundTitle>
         <TypingEffect></TypingEffect>
+        <div className="button-get-started-container">
+          <a href="#button-get-started">
+            <p className="flex items-center gap-2">
+              Get Started
+              <span>
+                <svg
+                  className="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1"
+                    d="M5 9l7 7 7-7M5 3l7 7 7-7"
+                  />
+                </svg>
+              </span>
+            </p>
+          </a>
+        </div>
       </section>
+      <div
+        id="button-get-started"
+        style={{
+          height: "8vh",
+        }}
+      ></div>
       <div className="py-10">
         <h1 className="text-4xl font-bold mb-20">Campaigns:</h1>
         <div className="grid grid-cols-3 gap-4">

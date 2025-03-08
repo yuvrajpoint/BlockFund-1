@@ -3,7 +3,7 @@
 import "../styles/navbar.css";
 
 import Image from "next/image";
-import returnZeroDp from "@public/return-zero-logo.jpg";
+import returnZeroDp from "@public/ret-zero-logo.";
 
 import { client } from "@/app/client";
 import Link from "next/link";
@@ -25,19 +25,21 @@ const Navbar = () => {
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-centre">
-              <Image
-                src={returnZeroDp}
-                alt="BlockFund"
-                width={28}
-                style={{
-                  filter: "drop-shadow(0px 0px 24px #7FB22D)",
-                  width: "3rem",
-                }}
-              />
+              <Link href={"/"}>
+                <Image
+                  src={returnZeroDp}
+                  alt="BlockFund"
+                  width={28}
+                  style={{
+                    filter: "drop-shadow(0px 0px 24px #7FB22D)",
+                    width: "3rem",
+                  }}
+                />
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block flex">
               <div className="flex space-x-4">
-                <Link href={"/"}>
+                <Link href={"/#button-get-started"}>
                   <p
                     className="test-css-class rounded-md px-3 py-2 text-sm font-medium text-slate-700"
                     style={{ margin: 6 }}
