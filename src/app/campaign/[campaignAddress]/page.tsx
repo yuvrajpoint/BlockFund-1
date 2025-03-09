@@ -4,7 +4,12 @@ import { client } from "@/app/client";
 import TierCard from "@/app/components/TierCard";
 import { useParams } from "next/navigation";
 import { useState } from "react";
-import { getContract, prepareContractCall, ThirdwebContract } from "thirdweb";
+import {
+  getContract,
+  prepareContractCall,
+  sendTransaction,
+  ThirdwebContract,
+} from "thirdweb";
 import { sepolia } from "thirdweb/chains";
 import {
   lightTheme,
@@ -93,19 +98,47 @@ export default function CampaignPage() {
     <div className="mx-auto max-w-7xl px-2 mt-4 sm:px-6 lg:px-8">
       <div className="flex flex-row justify-between items-center">
         {!isLoadingName && <p className="text-4xl font-semibold">{name}</p>}
-        {owner === account?.address && (
-          <div className="flex flex-row">
-            <button
-              className="px-4 py-2 bg-blue-500 text-white rounded-md"
-              style={{
-                backgroundColor: "#7FB22D",
+        <div className="flex flex-column justify-between items-centre">
+          {owner === account?.address && (
+            <div className="flex flex-row mr-4">
+              <button
+                className="px-4 py-2 bg-blue-500 text-white rounded-md"
+                style={{
+                  backgroundColor: "#7FB22D",
+                }}
+                onClick={() => setIsEditing(!isEditing)}
+              >
+                {isEditing ? "Done" : "Edit"}
+              </button>
+            </div>
+          )}
+
+          {owner === account?.address && (
+            <TransactionButton
+              transaction={() =>
+                prepareContractCall({
+                  contract,
+                  method: "function withdraw()",
+                  params: [],
+                })
+              }
+              onTransactionConfirmed={async (transaction) => {
+                alert(`Withdrawn Successful!`);
               }}
-              onClick={() => setIsEditing(!isEditing)}
+              disabled={
+                parseInt(totalBalance as string) < parseInt(totalGoal as string)
+              }
+              className={`px-4 py-2 text-white rounded-md ${
+                parseInt(totalBalance as string) >=
+                parseInt(totalGoal as string)
+                  ? "bg-red-500 hover:bg-red-600"
+                  : "bg-gray-400 cursor-not-allowed"
+              }`}
             >
-              {isEditing ? "Done" : "Edit"}
-            </button>
-          </div>
-        )}
+              Withdraw
+            </TransactionButton>
+          )}
+        </div>
       </div>
 
       <div className="my-4">
